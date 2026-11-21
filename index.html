@@ -9,73 +9,308 @@
   <title>ESTIM CONNECT</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <header class="header">
-    <div class="brand">
-      <span class="brand-icon">E</span>
-      <div>
-        <h1>ESTIM CONNECT</h1>
-        <p>Votre espace académique</p>
+  <div class="app">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">E</div>
+        <div>
+          <strong>ESTIM CONNECT</strong>
+          <small>ESPACE ÉTUDIANT</small>
+        </div>
       </div>
-    </div>
-    <button class="profile-button" aria-label="Mon profil">👤</button>
-  </header>
 
-  <main class="container">
+      <p class="menu-label">MENU PRINCIPAL</p>
+      <nav class="side-nav">
+        <button class="nav-btn active" data-view="accueil">⌂ <span>Tableau de bord</span></button>
+        <button class="nav-btn" data-view="emploi">▦ <span>Emploi du temps</span></button>
+        <button class="nav-btn" data-view="annonces">▤ <span>Annonces</span></button>
+        <button class="nav-btn" data-view="documents">▧ <span>Documents</span></button>
+        <button class="nav-btn" data-view="profil">◎ <span>Mon profil</span></button>
+      </nav>
 
-    <section class="welcome">
-      <p>ESPACE ÉTUDIANT</p>
-      <h2>Bienvenue sur ESTIM CONNECT</h2>
-      <p>Retrouvez vos informations académiques en un seul endroit.</p>
-    </section>
-
-    <section class="section">
-      <h2>Mon espace</h2>
-
-      <div class="menu-grid">
-        <article class="menu-card">
-          <span>📅</span>
-          <h3>Emploi du temps</h3>
-          <p>Consultez vos cours.</p>
-        </article>
-
-        <article class="menu-card">
-          <span>📢</span>
-          <h3>Annonces</h3>
-          <p>Actualités de l'ESTIM.</p>
-        </article>
-
-        <article class="menu-card">
-          <span>📚</span>
-          <h3>Documents</h3>
-          <p>Vos ressources pédagogiques.</p>
-        </article>
-
-        <article class="menu-card">
-          <span>👤</span>
-          <h3>Mon profil</h3>
-          <p>Vos informations personnelles.</p>
-        </article>
+      <div class="sidebar-bottom">
+        <div class="help-card">
+          <strong>Besoin d'aide ?</strong>
+          <p>Retrouvez ici les informations de votre espace étudiant.</p>
+          <button data-view="annonces">Consulter</button>
+        </div>
+        <small class="version">ESTIM CONNECT · Prototype</small>
       </div>
-    </section>
+    </aside>
 
-    <section class="section">
-      <h2>Informations</h2>
-      <div class="notice">
-        <strong>Bienvenue sur votre plateforme !</strong>
-        <p>Les informations académiques seront bientôt disponibles ici.</p>
+    <main class="main-area">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">ESPACE ACADÉMIQUE</span>
+          <h1 id="page-title">Tableau de bord</h1>
+        </div>
+        <div class="top-actions">
+          <button class="notification" id="notification-btn" aria-label="Notifications">♧</button>
+          <button class="profile-mini" data-view="profil">É</button>
+        </div>
+      </header>
+
+      <div class="content">
+
+        <section class="view active" id="accueil">
+          <div class="welcome">
+            <div>
+              <span class="welcome-tag">BIENVENUE SUR VOTRE ESPACE</span>
+              <h2>Votre parcours académique,<br>au même endroit.</h2>
+              <p>Consultez vos informations et restez connecté à votre établissement.</p>
+              <button class="primary-btn" data-view="emploi">Voir mon emploi du temps →</button>
+            </div>
+            <div class="welcome-symbol">E</div>
+          </div>
+
+          <div class="section-heading">
+            <div>
+              <h2>Mon espace</h2>
+              <p>Accédez rapidement à vos services.</p>
+            </div>
+          </div>
+
+          <div class="stats-grid">
+            <button class="stat-card" data-view="emploi">
+              <span class="stat-icon green">▦</span>
+              <strong>Emploi du temps</strong>
+              <small>Consulter les cours</small>
+              <span class="card-arrow">→</span>
+            </button>
+            <button class="stat-card" data-view="annonces">
+              <span class="stat-icon gold">▤</span>
+              <strong>Annonces</strong>
+              <small>Actualités de l'ESTIM</small>
+              <span class="card-arrow">→</span>
+            </button>
+            <button class="stat-card" data-view="documents">
+              <span class="stat-icon blue">▧</span>
+              <strong>Documents</strong>
+              <small>Ressources pédagogiques</small>
+              <span class="card-arrow">→</span>
+            </button>
+            <button class="stat-card" data-view="profil">
+              <span class="stat-icon purple">◎</span>
+              <strong>Mon profil</strong>
+              <small>Mes informations</small>
+              <span class="card-arrow">→</span>
+            </button>
+          </div>
+
+          <div class="section-heading">
+            <div>
+              <h2>Dernières informations</h2>
+              <p>Les informations importantes de votre espace.</p>
+            </div>
+            <button class="text-btn" data-view="annonces">Tout voir →</button>
+          </div>
+
+          <div class="notice-card">
+            <span class="notice-icon">i</span>
+            <div>
+              <strong>Bienvenue sur ESTIM CONNECT</strong>
+              <p>Cette plateforme est actuellement en phase de prototype. Les informations présentées sont des exemples.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="inscription">
+          <div class="form-intro">
+            <span class="eyebrow">REJOINDRE LA PLATEFORME</span>
+            <h2>Créer un compte étudiant</h2>
+            <p>Renseignez les informations ci-dessous pour découvrir l'espace étudiant.</p>
+          </div>
+
+          <form id="register-form" class="form-card">
+            <h3>Informations personnelles</h3>
+            <div class="form-grid">
+              <label>Nom
+                <input type="text" name="nom" placeholder="Votre nom" required>
+              </label>
+              <label>Prénom
+                <input type="text" name="prenom" placeholder="Votre prénom" required>
+              </label>
+              <label>Adresse e-mail
+                <input type="email" name="email" placeholder="exemple@email.com" required>
+              </label>
+              <label>Numéro étudiant
+                <input type="text" name="matricule" placeholder="Votre matricule">
+              </label>
+            </div>
+
+            <h3 class="form-subtitle">Informations académiques</h3>
+            <div class="form-grid">
+              <label>Filière
+                <select name="filiere" required>
+                  <option value="">Choisir une filière</option>
+                  <option>Gestion des ressources humaines</option>
+                  <option>Informatique</option>
+                  <option>Management</option>
+                  <option>Comptabilité et finance</option>
+                  <option>Commerce et marketing</option>
+                  <option>Autre</option>
+                </select>
+              </label>
+              <label>Niveau d'études
+                <select name="niveau" required>
+                  <option value="">Choisir le niveau</option>
+                  <option>Licence 1</option>
+                  <option>Licence 2</option>
+                  <option>Licence 3</option>
+                  <option>Master 1</option>
+                  <option>Master 2</option>
+                </select>
+              </label>
+            </div>
+
+            <h3 class="form-subtitle">Sécurité du compte (démonstration)</h3>
+            <div class="form-grid">
+              <label>Mot de passe
+                <input type="password" name="password" minlength="8" placeholder="8 caractères minimum" required>
+              </label>
+              <label>Confirmer le mot de passe
+                <input type="password" name="confirm" minlength="8" placeholder="Répéter le mot de passe" required>
+              </label>
+            </div>
+
+            <label class="check-label">
+              <input type="checkbox" required>
+              J'accepte les conditions d'utilisation du prototype.
+            </label>
+
+            <button class="primary-btn full-btn" type="submit">Créer mon compte</button>
+            <p class="form-footer">Vous avez déjà un compte ? <button type="button" class="inline-link" data-view="connexion">Se connecter</button></p>
+          </form>
+        </section>
+
+        <section class="view" id="connexion">
+          <div class="form-intro">
+            <span class="eyebrow">HEUREUX DE VOUS REVOIR</span>
+            <h2>Connexion à votre espace</h2>
+            <p>Accédez à votre tableau de bord étudiant.</p>
+          </div>
+          <form id="login-form" class="form-card narrow-card">
+            <div class="login-symbol">E</div>
+            <h3>Se connecter</h3>
+            <label>Adresse e-mail
+              <input type="email" name="email" placeholder="Votre adresse e-mail" required>
+            </label>
+            <label>Mot de passe
+              <input type="password" name="password" placeholder="Votre mot de passe" required>
+            </label>
+            <button class="primary-btn full-btn" type="submit">Accéder à mon espace</button>
+            <p class="form-footer">Pas encore de compte ? <button type="button" class="inline-link" data-view="inscription">Créer un compte</button></p>
+            <p class="demo-note">Connexion de démonstration : aucun compte réel n'est vérifié.</p>
+          </form>
+        </section>
+
+        <section class="view" id="emploi">
+          <div class="section-heading">
+            <div>
+              <h2>Emploi du temps</h2>
+              <p>Exemple d'organisation hebdomadaire.</p>
+            </div>
+            <span class="demo-badge">DÉMONSTRATION</span>
+          </div>
+          <div class="table-card">
+            <div class="table-scroll">
+              <table>
+                <thead><tr><th>Jour</th><th>Horaire</th><th>Cours</th><th>Salle</th></tr></thead>
+                <tbody>
+                  <tr><td>Lundi</td><td>08h00–10h00</td><td>Management</td><td>A1</td></tr>
+                  <tr><td>Lundi</td><td>10h30–12h30</td><td>Informatique</td><td>B2</td></tr>
+                  <tr><td>Mardi</td><td>08h00–10h00</td><td>Communication</td><td>A2</td></tr>
+                  <tr><td>Mercredi</td><td>13h00–15h00</td><td>Comptabilité</td><td>B1</td></tr>
+                  <tr><td>Jeudi</td><td>08h00–10h00</td><td>Anglais</td><td>A3</td></tr>
+                  <tr><td>Vendredi</td><td>10h00–12h00</td><td>Travaux dirigés</td><td>B2</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="view" id="annonces">
+          <div class="section-heading">
+            <div>
+              <h2>Annonces et actualités</h2>
+              <p>Informations destinées aux étudiants.</p>
+            </div>
+          </div>
+          <article class="announcement">
+            <span class="announcement-tag">INFORMATION</span>
+            <h3>Bienvenue sur ESTIM CONNECT</h3>
+            <p>Un espace numérique conçu pour faciliter l'accès aux informations académiques.</p>
+            <small>Annonce de démonstration</small>
+          </article>
+          <article class="announcement">
+            <span class="announcement-tag gold-tag">À VENIR</span>
+            <h3>Les actualités de votre établissement</h3>
+            <p>Les annonces officielles pourront être publiées ici après validation de la plateforme.</p>
+            <small>Annonce de démonstration</small>
+          </article>
+        </section>
+
+        <section class="view" id="documents">
+          <div class="section-heading">
+            <div>
+              <h2>Documents pédagogiques</h2>
+              <p>Un espace pour retrouver les ressources utiles.</p>
+            </div>
+          </div>
+          <div class="document-card">
+            <span class="document-icon">PDF</span>
+            <div><strong>Guide de l'étudiant</strong><small>Document de démonstration</small></div>
+            <span class="coming-soon">Bientôt</span>
+          </div>
+          <div class="document-card">
+            <span class="document-icon">DOC</span>
+            <div><strong>Supports de cours</strong><small>Ressources pédagogiques</small></div>
+            <span class="coming-soon">Bientôt</span>
+          </div>
+          <div class="document-card">
+            <span class="document-icon">PDF</span>
+            <div><strong>Calendrier académique</strong><small>Planning de l'année</small></div>
+            <span class="coming-soon">Bientôt</span>
+          </div>
+        </section>
+
+        <section class="view" id="profil">
+          <div class="section-heading">
+            <div>
+              <h2>Mon profil</h2>
+              <p>Vos informations de démonstration.</p>
+            </div>
+          </div>
+          <div class="profile-card">
+            <div class="profile-avatar" id="profile-avatar">É</div>
+            <h3 id="profile-name">Étudiant ESTIM</h3>
+            <p id="profile-email">Aucune session ouverte</p>
+            <div class="profile-info">
+              <div><small>Filière</small><strong id="profile-filiere">Non renseignée</strong></div>
+              <div><small>Niveau</small><strong id="profile-niveau">Non renseigné</strong></div>
+              <div><small>Matricule</small><strong id="profile-matricule">Non renseigné</strong></div>
+            </div>
+            <button class="secondary-btn" id="logout-btn">Fermer la session de démonstration</button>
+          </div>
+        </section>
+
       </div>
-    </section>
+      <footer>© 2026 ESTIM CONNECT · Prototype en développement</footer>
+    </main>
+  </div>
 
-  </main>
+  <nav class="mobile-nav">
+    <button class="nav-btn active" data-view="accueil">⌂<small>Accueil</small></button>
+    <button class="nav-btn" data-view="emploi">▦<small>Cours</small></button>
+    <button class="nav-btn" data-view="annonces">▤<small>Infos</small></button>
+    <button class="nav-btn" data-view="profil">◎<small>Profil</small></button>
+  </nav>
 
-  <footer class="footer">
-    <p>ESTIM CONNECT · Projet en développement</p>
-  </footer>
-
+  <div id="toast" class="toast" role="status"></div>
   <script src="script.js"></script>
 </body>
-</html>
-
+              </html>
+  
