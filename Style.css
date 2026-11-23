@@ -794,8 +794,9 @@ footer {
   }
 
   .welcome {
-    min-height: 260px;
-    padding: 25px 22px;
+  min-height: 210px;
+  padding: 22px 20px;
+  border-radius: 16px;
   }
 
   .welcome-symbol {
